@@ -9,7 +9,16 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     canIUseGetUserProfile: false,
-    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
+    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName'), // 如需尝试获取用户信息可改为false
+      src: '../../assets/images/first.png',
+      tssrc:'../../assets/images/transport.png',
+      cust:'../../assets/images/customer.png',
+      car:'../../assets/images/car.png',
+      arrowright:'../../assets/images/arrow_right.png',
+      arrowrighttwo:'../../assets/images/arrow_right_two.png',
+      calculator:'../../assets/images/calculator.png',
+      process:'../../assets/images/process.jpg',
+      copy:'../../assets/images/copy.png'
   },
   // 事件处理函数
   bindViewTap() {

@@ -1,19 +1,133 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #aaa;
+.bak{
+  width: 100%;
+  height: 200px;
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+  background-color: #42ace2;
 }
 
-.userinfo-avatar {
-  overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.journey{
+  width: 240px;
+  height: 150px;
+  border-radius: 20px;
+  background-color: white;
+  margin: 14px auto;
+  box-shadow: 0px 0px 4px 4px rgba(0.5, 0.5, 0.5, 0.5);
+ 
 }
 
-.usermotto {
-  margin-top: 200px;
+.swip{
+    width: 280px;
+    height: 120px;
+    margin: auto;
+}
+
+.item{
+    height:100% ;
+    line-height: 100px;
+    text-align: center;
+    
+}
+
+.picitem{
+    border-radius: 12%;
+}
+
+.immediately{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    line-height: 120px;
+}
+
+.trport{
+    background-color: #42ace2;
+    color: white;
+    font-size: 12px;
+}
+
+.cutbak{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.cut{
+    margin-left: 20px;
+    width: 260px;
+    background-color: #e35f4e;
+    border-radius:  25px;
+    display: flex;
+}
+
+.cutfz{
+    margin-top: 6px;
+}
+
+.estimate{
+    margin: auto;
+    width: 300px;
+    height: 160px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Notice{
+    width: 120px;
+    height: 120px;
+    background-color: #42ace2;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 4px 4px rgba(0.3, 0.3, 0.3, 0.3);
+}
+
+.billing{
+    width: 120px;
+    height: 120px;
+    background-color: #e35f4e;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 4px 4px rgba(0.3, 0.3, 0.3, 0.3);
+}
+
+.tice{
+    margin-top: 16px;
+    text-align: center;
+    color: white;
+}
+
+.calculate{
+    margin-top: 16px;
+    text-align: center;
+    color: #8b1b0c;
+}
+
+.easy{
+    width: 100%;
+    height: 180px;
+    margin: 0px auto;
+}
+
+.btncp{
+    width: 240px;
+    height: 30px;
+    background-color: #42ace2;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 25px;
+}
+
+.cpbtn{
+    width: 200px;
+    height: 30px;
+    font-size: 14px;
+    background-color: #42ace2;
+    color: white;
+    border-radius: 25px;
 }

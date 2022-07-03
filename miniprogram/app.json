@@ -1,28 +1,42 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/order/order",
+    "pages/personal/personal"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#42ace2",
+    "navigationBarTitleText": "快递转运",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#000000",
-    "selectedColor": "#d8210a",
+    "selectedColor": "#2aa1df",
     "list": [{
       "pagePath": "pages/index/index",
-      "iconPath": "./assets/tabbar/personal.svg",
-      "selectedIconPath": "./assets/tabbar/personal_nope.svg",
+      "iconPath": "./assets/tabbar/front page_nope.png",
+      "selectedIconPath": "./assets/tabbar/front page.png",
       "text": "首页"
     },
     {
       "pagePath": "pages/logs/logs",
-      "iconPath": "./assets/tabbar/voucher.svg",
-      "selectedIconPath": "./assets/tabbar/voucher_nope.svg",
+      "iconPath": "./assets/tabbar/voucher_nope.png",
+      "selectedIconPath": "./assets/tabbar/voucher.png",
       "text": "优惠劵"
+    },
+    {
+      "pagePath": "pages/order/order",
+      "iconPath": "./assets/tabbar/order_nope.png",
+      "selectedIconPath": "./assets/tabbar/order.png",
+      "text": "订单"
+    },
+    {
+      "pagePath": "pages/personal/personal",
+      "iconPath": "./assets/tabbar/personal_nope.png",
+      "selectedIconPath": "./assets/tabbar/personal.png",
+      "text": "个人"
     }
   ]
   },

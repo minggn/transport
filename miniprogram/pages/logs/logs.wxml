@@ -1,6 +1,10 @@
 <!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:key="timeStamp" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log.date}}</text>
-  </block>
+<view class="page">
+ <view class="logtop">
+ </view>
+ <view class="discount">
+    <image class="dis"  src="{{discount_one}}"></image>
+    <image class="dis"  src="{{discount_two}}"></image>
+    <image class="dis"  src="{{discount_three}}"></image>
+ </view>
 </view>

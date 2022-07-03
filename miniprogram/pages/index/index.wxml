@@ -1,23 +1,83 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+<view>
+  <view class="bak">
+
+    <swiper  class="swip" indicator-dots indicator-color="white" autoplay="true" interval="1800" circular="true">
+        <swiper-item class="one">
+        <view class="item">
+        <image class="picitem" style="width: 240px; height: 120px; "  src="{{src}}"></image>
+        </view>
+        </swiper-item>
+        <swiper-item class="two">
+        <view class="item">  
+        <image class="picitem" style="width: 240px; height: 120px; "  src="{{src}}"></image></view>
+        </swiper-item>
+    </swiper>
+
+     <view class="journey">
+     <view class="immediately">
+     <view style="font-size: 24px;">中国</view>
+     <view class="item">  
+     <image class="picitem" style="width: 50px; height: 50px;margin-top: 36px;"  src="{{tssrc}}"></image>
+     </view>
+     <view style="font-size: 24px;">美国</view>
+     </view>
+     <button class="trport">立即转运</button>
+     </view>
+
+<view>
+    <view class="cut">  
+    <view class="cutbak">
+        <image class="picitem" style="width: 30px; height: 30px;margin-top: 10px;"  src="{{cust}}"></image>
+    </view>
+    <view class="cutfz">
+    <view style="color: white;">联系客服</view>
+    <view style="font-size:12px;color:#e3e2cd;">为您解决下单问题</view>
+    </view>
+     </view>
+</view>
+
+<view class="estimate">
+<view class="Notice">
+<view class="tice">
+    <view style="font-size:20px;">转运须知</view>
+    <view style="font-size: 12px;">流程和注意事项</view>
+</view>
+<view class="carrow">
+    <image class="picitem" style="width: 50px; height: 50px;margin-top: 10px;"  src="{{arrowright}}"></image>
+    <image class="picitem" style="width: 55px; height: 55px;margin-top: 10px;"  src="{{car}}"></image>
+</view>
+</view>
+
+<view class="billing">
+    <view class="calculate">
+    <view style="font-size:20px;">运费估算</view>
+    <view style="font-size: 12px;">费用心中有数</view>
+</view>
+<view>
+    <image class="picitem" style="width: 50px; height: 50px;margin-top: 10px;"  src="{{arrowrighttwo}}"></image>
+    <image class="picitem" style="width: 55px; height: 55px;margin-top: 10px;"  src="{{calculator}}"></image>
+</view>
+</view>
+
+</view>
+
+<view class="easy">
+<view style="font-size:24px;margin-left: 10px;">轻松转运</view>
+<view>
+    <image  style="width: 100%; height: 100px;margin-top: 10px;"  src="{{process}}"></image>
+</view>
+</view>
+
+<view>
+<view class="btncp">
+    <image  style="width: 30px; height: 30px;margin-left: 35px;"  src="{{copy}}"></image>
+    <button class="cpbtn">
+        复制仓库地址去购物
+    </button>
+</view>
+<view style="color: #42ace2;font-size: 12px;text-align: center;">电商平台的收货地址请填写我们</view>
+</view>
+
   </view>
 </view>
