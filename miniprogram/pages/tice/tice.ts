@@ -1,19 +1,15 @@
-// pages/order/order.ts
+// pages/tice/tice.ts
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    myposition:'../../assets/images/myposition.png',
-    gocity:'../../assets/images/gocity.png',
-    warn:'../../assets/images/warn.png',
-    focus: false,
-    inputValue: ''
+
   },
-  bindKeyInput: function (e:any) {
-    this.setData({
-      inputValue: e.detail.value
+  backindex(){
+    wx.navigateBack({
+      delta: 10
     })
   },
 

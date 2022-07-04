@@ -1,0 +1,20 @@
+<!--pages/logs/details/cupon.wxml-->
+<view>
+    <view class="entire">
+        <view class="bfcupon">
+            <view class="fivecupon">
+            <view style="font-size: 40px;margin-top: 18px;margin-left: 10px;color: white;">15</view>
+            <view class="yuan">元</view>
+            </view>
+        <view style="font-size: 14px;margin-left: 10px;color: white;">满100元使用</view>
+        </view>
+        <view style="margin-left: 20px;">
+            <view style="font-size: 18px;margin-top: 24px;">新品优惠劵</view>
+        <view style="font-size: 12px;color: #ccc;margin-top: 10px;">2022.10.10-2020.11.11</view>
+        </view>
+      
+    </view>
+
+    <view class="gotire" bindtap="goentire">兑换优惠劵</view>
+
+</view>

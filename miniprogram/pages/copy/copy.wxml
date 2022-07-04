@@ -1,0 +1,41 @@
+<!--pages/copy/copy.wxml-->
+<view>
+  <view>
+    <image class="picitem" style="width: 100%; height: 620px;margin-top: 10px;"  src="{{bale}}"></image>
+  </view>
+  <view class="evbtn">
+    <view style="font-size: 18px;margin-left: 10px;">预告运费</view>
+
+    <view class="estimatetop">
+       <view class="channel">
+         <view style="margin-top: 25px;">
+           <view>转运渠道</view>
+           <view>普通货物</view>
+         </view>
+       </view>
+       <view class="estimate">
+         <view style="margin-top: 25px;">
+          <view>预估重量</view>
+           <view> 
+        <input class="weui-input"  maxlength="10" bindinput="bindKeyInput" placeholder="请输入重量"/>
+         </view>
+        </view>
+
+       </view>
+    </view>
+<view>
+  <view class="volume">
+      <view class="volumetwo">
+        <view>预估体积</view>
+           <view>请输入长宽高</view>
+      </view>
+    </view>
+</view>
+    <view class="freight">
+      <view class="freighttwo">
+        <view>预估运费（实际结果以订单为准）</view>
+           <view>￥{{inputValue*mon}}.00</view>
+      </view>
+    </view>
+  </view>
+</view>

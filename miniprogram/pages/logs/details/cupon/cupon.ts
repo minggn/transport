@@ -1,20 +1,27 @@
-// pages/order/order.ts
+// pages/logs/details/cupon.ts
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    myposition:'../../assets/images/myposition.png',
-    gocity:'../../assets/images/gocity.png',
-    warn:'../../assets/images/warn.png',
-    focus: false,
-    inputValue: ''
+   
   },
-  bindKeyInput: function (e:any) {
-    this.setData({
-      inputValue: e.detail.value
-    })
+  goentire(){
+    wx.navigateBack({
+        delta: 10,
+         success: function () {
+                    wx.getClipboardData({
+                      success: function () {
+                        wx.showToast({
+                          title: '领取成功',
+                          icon: 'none',
+                          duration: 2000
+                     })
+              }
+            })
+          }
+        })
   },
 
   /**

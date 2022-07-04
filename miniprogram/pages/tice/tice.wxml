@@ -1,0 +1,4 @@
+<!--pages/tice/tice.wxml-->
+<view>
+  <button bindtap="backindex">我已知悉</button>
+</view>

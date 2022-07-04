@@ -8,6 +8,11 @@ Page({
         discount_two: '../../assets/images/discount_two.png',
         discount_three: '../../assets/images/discount_three.png',
       },
+      Details(){
+        wx.navigateTo({
+            url: '/pages/logs/details/details',
+          })
+      },
       
   onLoad() {
     this.setData({

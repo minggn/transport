@@ -1,20 +1,21 @@
-// pages/order/order.ts
+// pages/copy/copy.ts
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    myposition:'../../assets/images/myposition.png',
-    gocity:'../../assets/images/gocity.png',
-    warn:'../../assets/images/warn.png',
     focus: false,
-    inputValue: ''
+    inputValue: '',
+    mon:'59',
+    lamon:'39',
+      bale:'../../assets/images/Bale.jpg'
   },
-  bindKeyInput: function (e:any) {
-    this.setData({
-      inputValue: e.detail.value
-    })
+  bindKeyInput(e:any) {
+        this.setData({
+            inputValue: e.detail.value ,
+            
+          })
   },
 
   /**

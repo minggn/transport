@@ -1,3 +1,11 @@
-{
-  "usingComponents": {}
+{ 
+  "navigationBarTitleText": "个人",
+  "usingComponents": {},
+  "pages":[
+    "pages/personal/activity/activity",
+    "pages/personal/customerservice/customerservice",
+    "pages/personal/transport/transport",
+    "pages/personal/Notice/Notice",
+    "pages/personal/us/us"
+  ]
 }

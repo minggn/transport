@@ -5,8 +5,64 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    userInfo: {},
+    hasUserInfo: false,
+    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') ,// 如需尝试获取用户信息可改为false
+    payment:'../../assets/images/payment.png',
+    ship:'../../assets/images/ship.png',
+    receipt:'../../assets/images/Receipt.png',
+    evaluation:'../../assets/images/Evaluation.png'
   },
+
+  getUserProfile() {
+    wx.getUserProfile({
+      desc: '展示用户信息', 
+      success: (res) => {
+        console.log(res)
+        this.setData({
+          userInfo: res.userInfo,
+          hasUserInfo: true
+        })
+      }
+    })
+  },
+//   myaddress(){
+//     wx.navigateTo({
+//       url: '/pages/myaddress/myaddress',
+//     })
+//   },
+//   mycoupon(){
+//     wx.navigateTo({
+//       url: '/pages/mycoupon/mycoupon',
+//     })
+//   },
+//   activity(){
+//     wx.navigateTo({
+//       url: '/pages/mycoupon/mycoupon',
+//     })
+//   },
+//   customerservice(){
+//     wx.navigateTo({
+//       url: '/pages/mycoupon/mycoupon',
+//     })
+//   },
+//   transport(){
+//     wx.navigateTo({
+//       url: '/pages/mycoupon/mycoupon',
+//     })
+//   },
+//   Notice(){
+//     wx.navigateTo({
+//       url: '/pages/mycoupon/mycoupon',
+//     })
+//   },
+//   us(){
+//     wx.navigateTo({
+//       url: '/pages/mycoupon/mycoupon',
+//     })
+//   },
+
+
 
   /**
    * 生命周期函数--监听页面加载

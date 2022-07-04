@@ -1,0 +1,39 @@
+.money{
+    width: 90px;
+    height: 90px;
+    border-color: #ccc;
+    border-right-style: dashed;
+   
+}
+
+.coupon{
+    display: flex;
+}
+
+.timeout{
+    display: flex;
+}
+
+.bigcom{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    border-color: #ccc;
+    border-bottom-style: dashed;
+}
+
+.bigcoup{
+    text-align: center;
+    margin-top: 25px;
+    margin-left: 16px;
+}
+
+.next{
+    font-size:12px;
+   background-color: #f6390d;
+   width: 60px;
+   height: 20px;
+   text-align: center;
+   line-height: 20px;
+   border-radius: 10px;
+}

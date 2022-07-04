@@ -1,20 +1,22 @@
-// pages/order/order.ts
+// pages/index/address/address.ts
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    myposition:'../../assets/images/myposition.png',
-    gocity:'../../assets/images/gocity.png',
-    warn:'../../assets/images/warn.png',
-    focus: false,
-    inputValue: ''
+    myposition:'../../../assets/images/myposition.png',
+    warn:'../../../assets/images/warn.png',
   },
-  bindKeyInput: function (e:any) {
-    this.setData({
-      inputValue: e.detail.value
-    })
+  goorder(){
+    wx.navigateTo({
+        url: '/pages/index/index',
+      })
+  },
+  goaddress(){
+    wx.navigateTo({
+        url: '/pages/myaddress/myaddress',
+      })
   },
 
   /**

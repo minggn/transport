@@ -1,2 +1,92 @@
 <!--pages/personal/personal.wxml-->
-<text>pages/personal/personal.wxml</text>
+<view class="big">
+<view class="head">
+    <view>
+        <view class="userinfo">
+    <block wx:if="{{canIUseOpenData}}">
+      <view class="userinfo-avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>
+    </block>
+  </view>
+    </view>
+</view>
+
+<view class="myorder">
+<view class="my">
+    <view>我的订单
+    </view>
+    <view style="font-size: 12px;">
+    全部订单 >
+    </view>
+</view>
+
+<view class="taborder">
+    
+    <view class="littab">
+        <image class="evord"  style="width: 30px; height: 30px;margin-left: 35px;"  src="{{payment}}"></image>
+        <view class="waitsize">待付款</view>
+    </view>
+    
+    
+  
+    <view class="littab">
+        <image class="evord"  style="width: 30px; height: 30px;margin-left: 35px;"  src="{{ship}}"></image>
+        <view class="waitsize">待发货</view>
+    </view>
+    
+
+   
+
+    <view class="littab">
+        <image class="evord"  style="width: 30px; height: 30px;margin-left: 35px;"  src="{{receipt}}"></image>
+        <view class="waitsize">待收货</view>
+    </view>
+   
+   
+
+   
+    <view class="littab">
+        <image class="evord"  style="width: 30px; height: 30px;margin-left: 35px;"  src="{{evaluation}}"></image>
+        <view class="waitsize">待评价</view>
+    </view>
+    
+   
+   
+
+</view>
+</view>
+
+<view class="morder">
+<view class="mo" bindtap="myaddress">
+<view>我的地址</view>
+<view>></view>
+</view>
+<view class="mo" bindtap="mycoupon">
+<view>我的优惠劵</view>
+<view>></view>
+</view>
+<view class="mo" bindtap="activity">
+<view>活动中心</view>
+<view>></view>
+</view>
+<view class="mo" bindtap="customerservice">
+<view>联系客服</view>
+<view>></view>
+</view>
+<view class="mo" bindtap="transport">
+<view>转运流程</view>
+<view>></view>
+</view>
+<view class="mo" bindtap="Notice">
+<view>转运须知</view>
+<view>></view>
+</view>
+<view class="mo" bindtap="us">
+<view>关于我们</view>
+<view>></view>
+</view>
+</view>
+
+</view>

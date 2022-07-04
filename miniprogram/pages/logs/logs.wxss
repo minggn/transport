@@ -5,7 +5,7 @@
 }
 
 .discount{
-    margin: 16px auto;
+    margin: auto;
 }
 
 .dis{

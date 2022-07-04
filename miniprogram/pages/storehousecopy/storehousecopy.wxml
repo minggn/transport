@@ -1,0 +1,24 @@
+<!--pages/storehousecopy/storehousecopy.wxml-->
+<view>
+    <view class="Ware">
+       <view class="Warehouse">
+        <image  style="width: 30px; height: 30px;margin-top: 10px;"  src="{{position}}"></image>
+        <view style="font-size:20px;margin-top:12px;">仓库地址</view>
+       </view>
+       <view class="copydata">
+          <view>收件人：龙华仓库</view>
+           <view>收货地址：深圳市龙华区龙华街道工业</view>
+           <view style="margin-left: 70px;">路壹城环智中心C座2607</view>
+           <view>联系电话：13388888888</view>
+           <view>邮政编码：518000</view>
+       </view>   
+    </view>
+
+    <view class="copybtn" bindtap="copy">
+       一键复制仓库地址信息
+    </view>
+
+    <view>
+
+    </view>
+</view>

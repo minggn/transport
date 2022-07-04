@@ -1,0 +1,51 @@
+<!--pages/index/address/address.wxml-->
+<view>
+    <view class="Target">
+        <view>
+            <view class="poshope">
+                <image style="width: 30px; height: 30px;margin-top: 10px;margin-left: 10px;" src="{{myposition}}"></image>
+                <view style="margin-top: 14px;">仓库地址</view>
+            </view>
+            <view class="hope">
+                <view style="font-size: 14px;">新希望仓库</view>
+                <view style="font-size: 14px;margin-left: 20px;">18688880130</view>
+                <view style="font-size: 14px;color: #3faae2;margin-left: 10px;">复制</view>
+            </view>
+            <view style="font-size: 12px;color: #ccc;margin-left: 40px;">深圳市龙华区龙华街道工业路壹城环智中心C座2607室</view>
+        </view>
+
+        <view class="destination">
+            <view style="font-size: 14px;margin-left: 36px;">新希望仓库</view>
+            <view class="hope">
+                <image style="width: 16px; height: 16px;margin-top: 0px;margin-left: 0px;" src="{{warn}}"></image>
+                <view style="font-size: 10px;margin-left: 8px;color: #e14f3d;margin-top: 2px;">请用英文填写</view>
+                <view class="address" bindtap="goaddress">选择地址</view>
+            </view>
+            <view style="margin-left: 34px;">
+                <view style="margin-top: 20px;font-size: 12px;">Name:
+
+                </view>
+                <view style="margin-top: 20px;font-size: 12px;">Phone:
+
+                </view>
+                <view style="margin-top: 20px;font-size: 12px;">Address:
+
+                </view>
+                <view style="margin-top: 20px;font-size: 12px;">City:
+
+                </view>
+                <view style="margin-top: 20px;font-size: 12px;">PostCode:
+
+                </view>
+            </view>
+            <view style="margin-top: 50px;">
+                <button bindtap="goorder" style="background-color: #42ace2;color: white;font-size: 12px;">立即转运</button>
+            </view>
+
+        </view>
+    </view>
+
+
+
+
+</view>

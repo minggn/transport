@@ -3,8 +3,8 @@
  <view class="logtop">
  </view>
  <view class="discount">
-    <image class="dis"  src="{{discount_one}}"></image>
-    <image class="dis"  src="{{discount_two}}"></image>
-    <image class="dis"  src="{{discount_three}}"></image>
+    <image class="dis" bindtap="Details"  src="{{discount_one}}"></image>
+    <image class="dis" bindtap="Details" src="{{discount_two}}"></image>
+    <image class="dis" bindtap="Details" src="{{discount_three}}"></image>
  </view>
 </view>

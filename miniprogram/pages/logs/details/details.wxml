@@ -1,0 +1,23 @@
+<!--pages/mycoupon/mycoupon.wxml-->
+<view>
+    <view class="bigcom">
+        <view class="money">
+            <view style="font-size: 40px;">￥10</view>
+            <view style="font-size: 12px;margin-left: 10px;">满￥599使用
+            </view>
+        </view>
+        <view class="bigcoup">
+            <view class="coupon">
+                <view style="background-color:#f6390d;color:white;font-size:12px;">满减券</view>
+                <view style="font-size: 12px;margin-left: 10px;">双十一无门槛10元券</view>
+            </view>
+            <view class="timeout"> 
+                <view style="font-size:12px;">2022.06.1到期</view>
+                <view style="font-size:12px;color: #f6390d;">（仅剩1天）</view>
+                <view class="next" bindtap="gocupon" >立即领取</view>
+            </view>
+        </view>
+    </view>
+
+
+</view>

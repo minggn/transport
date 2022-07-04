@@ -4,6 +4,7 @@ const app = getApp<IAppOption>()
 
 Page({
   data: {
+    display:'',
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
@@ -19,6 +20,41 @@ Page({
       calculator:'../../assets/images/calculator.png',
       process:'../../assets/images/process.jpg',
       copy:'../../assets/images/copy.png'
+  },
+  Mytice(){
+    wx.navigateTo({
+      url: '/pages/tice/tice',
+    })
+  },
+  storehousecopy(){
+    wx.navigateTo({
+      url: '/pages/storehousecopy/storehousecopy',
+    })
+  },
+  goindex(){
+    wx.navigateBack({
+        delta: 10
+      })
+  },
+  gonext(){
+    wx.navigateTo({
+        url: '/pages/index/address/address',
+      })
+  },
+  showview(){ 
+    this.setData({
+      display: "block"
+    })
+  },
+  hideview() {
+    this.setData({
+      display: "none"
+    })
+  },
+  freight(){
+    wx.navigateTo({
+      url: '/pages/copy/copy',
+    })
   },
   // 事件处理函数
   bindViewTap() {
