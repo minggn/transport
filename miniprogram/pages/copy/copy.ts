@@ -7,15 +7,33 @@ Page({
   data: {
     focus: false,
     inputValue: '',
-    mon:'59',
+    Total:'',
     lamon:'39',
-      bale:'../../assets/images/Bale.jpg'
+    mon:'59',
+    must:'1',
+    bale:'../../assets/images/Bale.jpg'
   },
   bindKeyInput(e:any) {
+      console.log(this.data)
+      console.log(e.detail.value)
+      var mon:any = this.data.mon
+      var lamon:any = this.data.lamon
+      var inputValue:any = e.detail.value
+      var must:any = this.data.must
+      if(e.detail.value >  "1"  ){
+        //   console.log(e.detail.value)
+        //   console.log(this.data)
         this.setData({
-            inputValue: e.detail.value ,
-            
+            inputValue: e.detail.value ,            
+            Total: (inputValue - must) * lamon +59 ,
           })
+      }else{
+        this.setData({
+            inputValue: e.detail.value  ,
+            Total:inputValue*mon
+          })
+      }
+        
   },
 
   /**

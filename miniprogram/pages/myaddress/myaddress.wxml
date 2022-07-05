@@ -1,2 +1,8 @@
 <!--pages/myaddress/myaddress.wxml-->
-<text>pages/myaddress/myaddress.wxml</text>
+<view>
+    <view>
+       <button class="resbtn" bindtap="goadd">
+       新建地址
+       </button>
+    </view>
+</view>

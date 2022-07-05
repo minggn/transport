@@ -34,7 +34,7 @@
     <view class="freight">
       <view class="freighttwo">
         <view>预估运费（实际结果以订单为准）</view>
-           <view>￥{{inputValue*mon}}.00</view>
+           <view>￥{{Total}}.00</view>
       </view>
     </view>
   </view>

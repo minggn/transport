@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    data1:"待付款",
     userInfo: {},
     hasUserInfo: false,
     canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') ,// 如需尝试获取用户信息可改为false
@@ -12,6 +13,31 @@ Page({
     ship:'../../assets/images/ship.png',
     receipt:'../../assets/images/Receipt.png',
     evaluation:'../../assets/images/Evaluation.png'
+  },
+  
+  one: function () {
+    var str = 0;
+    wx.navigateTo({
+      url: '/pages/everyorder/everyorder?str=' + str,
+    })
+  },
+  two: function () {
+    var str = 1;
+    wx.navigateTo({
+      url: '/pages/everyorder/everyorder?str=' + str,
+    })
+  },
+  three: function () {
+    var str = 2;
+    wx.navigateTo({
+      url: '/pages/everyorder/everyorder?str=' + str,
+    })
+  }, 
+  four: function () {
+    var str = 3;
+    wx.navigateTo({
+      url: '/pages/everyorder/everyorder?str=' + str,
+    })
   },
 
   getUserProfile() {
@@ -26,11 +52,11 @@ Page({
       }
     })
   },
-//   myaddress(){
-//     wx.navigateTo({
-//       url: '/pages/myaddress/myaddress',
-//     })
-//   },
+  everyorder(){
+    wx.navigateTo({
+      url: '/pages/everyorder/everyorder',
+    })
+  },
 //   mycoupon(){
 //     wx.navigateTo({
 //       url: '/pages/mycoupon/mycoupon',

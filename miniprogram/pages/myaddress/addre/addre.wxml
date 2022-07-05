@@ -1,0 +1,36 @@
+<!--pages/myaddress/addre/addre.wxml-->
+<view>
+   <view>
+    <view style="margin-left: 34px;">
+                <view style="margin-top: 20px;font-size: 12px;">Name:
+
+                </view>
+                <view style="margin-top: 20px;font-size: 12px;">Phone:
+
+                </view>
+                <view style="margin-top: 20px;font-size: 12px;">Address:
+
+                </view>
+                <view style="margin-top: 20px;font-size: 12px;">City:
+
+                </view>
+                <view style="margin-top: 20px;font-size: 12px;">PostCode:
+
+                </view>
+                <view style="margin-top: 20px;font-size: 12px;">Country:   
+
+               </view>
+               <view class="default">
+               设为默认
+                <switch checked="{{switch1Checked}}" bindchange="switch1Change"/> 
+                </view>
+
+                <view class="bbtn">
+                <view class="btn" >
+                  增加地址
+                </view>
+                </view>
+                
+            </view>
+   </view>
+</view>

@@ -4,6 +4,8 @@ const app = getApp<IAppOption>()
 
 Page({
   data: {
+    array: ['美国', '巴西', '日本', '英国','德国','法国','意大利','俄罗斯'], 
+    index: 0, 
     display:'',
     motto: 'Hello World',
     userInfo: {},
@@ -20,6 +22,11 @@ Page({
       calculator:'../../assets/images/calculator.png',
       process:'../../assets/images/process.jpg',
       copy:'../../assets/images/copy.png'
+  },
+  bindPickerChange: function (e:any) { 
+    this.setData({ 
+     index: e.detail.value 
+    }) 
   },
   Mytice(){
     wx.navigateTo({

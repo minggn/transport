@@ -1,18 +1,16 @@
-// pages/myaddress/myaddress.ts
+// pages/myaddress/addre/addre.ts
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    switch1Checked: true,
+    switch1Style: '',
   },
-  goadd(){
-    wx.navigateTo({
-        url: '/pages/myaddress/addre/addre',
-      })
+  switch1Change(e:any){
+       console.log(e.detail.value)
   },
-
   /**
    * 生命周期函数--监听页面加载
    */

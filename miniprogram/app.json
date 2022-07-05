@@ -11,7 +11,10 @@
     "pages/logs/details/details",
     "pages/logs/details/cupon/cupon",
     "pages/index/address/address",
-    "pages/myaddress/myaddress"
+    "pages/myaddress/myaddress",
+    "pages/myaddress/addre/addre",
+    "pages/everyorder/everyorder"
+
 
 
   ],

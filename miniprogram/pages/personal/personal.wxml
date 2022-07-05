@@ -14,7 +14,7 @@
 </view>
 
 <view class="myorder">
-<view class="my">
+<view class="my" bindtap="everyorder">
     <view>我的订单
     </view>
     <view style="font-size: 12px;">
@@ -24,14 +24,14 @@
 
 <view class="taborder">
     
-    <view class="littab">
+    <view class="littab" bindtap="one">
         <image class="evord"  style="width: 30px; height: 30px;margin-left: 35px;"  src="{{payment}}"></image>
         <view class="waitsize">待付款</view>
     </view>
     
     
   
-    <view class="littab">
+    <view class="littab" bindtap="two">
         <image class="evord"  style="width: 30px; height: 30px;margin-left: 35px;"  src="{{ship}}"></image>
         <view class="waitsize">待发货</view>
     </view>
@@ -39,7 +39,7 @@
 
    
 
-    <view class="littab">
+    <view class="littab" bindtap="three">
         <image class="evord"  style="width: 30px; height: 30px;margin-left: 35px;"  src="{{receipt}}"></image>
         <view class="waitsize">待收货</view>
     </view>
@@ -47,7 +47,7 @@
    
 
    
-    <view class="littab">
+    <view class="littab" bindtap="four">
         <image class="evord"  style="width: 30px; height: 30px;margin-left: 35px;"  src="{{evaluation}}"></image>
         <view class="waitsize">待评价</view>
     </view>
