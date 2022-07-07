@@ -17,7 +17,8 @@
                 <view class="next" bindtap="gocupon" >立即领取</view>
             </view>
         </view>
+        
     </view>
-
+   
 
 </view>

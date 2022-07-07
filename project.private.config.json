@@ -13,6 +13,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/freight/freight",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

@@ -1,20 +1,21 @@
 <!--pages/logs/details/cupon.wxml-->
 <view>
-    <view class="entire">
-        <view class="bfcupon">
-            <view class="fivecupon">
-            <view style="font-size: 40px;margin-top: 18px;margin-left: 10px;color: white;">15</view>
-            <view class="yuan">元</view>
-            </view>
-        <view style="font-size: 14px;margin-left: 10px;color: white;">满100元使用</view>
-        </view>
-        <view style="margin-left: 20px;">
-            <view style="font-size: 18px;margin-top: 24px;">新品优惠劵</view>
-        <view style="font-size: 12px;color: #ccc;margin-top: 10px;">2022.10.10-2020.11.11</view>
-        </view>
-      
-    </view>
+  <button bindtap="mySort" data-property="id">根据id排序</button>
+<view  wx:for="{{arr}}" wx:key="id" wx:for-item="item" data-id="{{item.id}}">
+<view class="isid" style="color: white;width: 100%;height: 100px;line-height: 100px;display: flex;">
+<view style="width:140px;height:100px;background-color:#ffd163;display: flex;border-radius: 8px;margin-top: 4px;">
+<view style="display: flex;">
+  <view style="font-size: 40px;margin-left: 34px;">{{item.money}}</view>
+  <view style="margin-top: 8px;">{{item.tatl}}</view>
+</view>
 
+</view>
+<view>
+  <view style="color: rgb(218, 31, 31);margin-left: 60px;">新品优惠劵</view>
+  <view style="margin-top: -70px;font-size: 12px;margin-left: 40px;color: #ccc;">2022.10.10-2022.11.11</view>
+</view>
+</view>
+</view> 
     <view class="gotire" bindtap="goentire">兑换优惠劵</view>
 
 </view>

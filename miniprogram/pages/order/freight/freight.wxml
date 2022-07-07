@@ -1,0 +1,62 @@
+<view class='ticket-container'>
+    <scroll-view scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}"
+      scroll-top="{{scrollTop}}" style="height: 300px;">
+      <!--Tab布局-->
+      <view class='title'>
+        <view class="{{0 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='0'>
+          <text>全部</text>
+          <hr class="line-style"/>
+        </view>
+        
+        <view class="{{1 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='1'>
+          <text>待支付</text>
+          <hr class="line-style"/>
+        </view>
+        <view class="{{2 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='2'>
+          <text>已支付</text>
+          <hr class="line-style" />
+        </view>
+        <view class="{{3 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='3'>
+          <text>已完成</text>
+          <hr class="line-style" />
+        </view>
+      </view>
+ 
+      <!--内容布局-->
+      <swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+        <swiper-item class='swiper'>
+          <view wx:for="{{firstList}}" wx:for-item="item" class='record-item'>
+            <view class='name'>
+              <span>订单号：{{item.name}}{{text}}</span>
+              <span>面额：{{item.money}}</span>
+            </view>
+            <view bindtap="goBale">确认打包</view>
+          </view>
+        </swiper-item>
+        <swiper-item class='swiper' >
+          <view wx:for="{{secondList}}" wx:for-item="item" class='record-item'>
+            <view class='name'>
+              <span>订单号：{{item.name}}</span>
+              <span>面额：{{item.money}}</span>
+            </view>
+          </view>
+        </swiper-item>
+        <swiper-item class='swiper' >
+          <view wx:for="{{thirdList}}" wx:for-item="item" class='record-item'>
+           <view class='name'>
+              <span>订单号：{{item.name}}</span>
+              <span>面额：{{item.money}}</span>
+            </view>
+          </view>
+        </swiper-item>
+        <swiper-item class='swiper'>
+          <view wx:for="{{thirdList}}" wx:for-item="item" class='record-item'>
+           <view class='name'>
+              <span>订单号：{{item.name}}</span>
+              <span>面额：{{item.money}}</span>
+            </view>
+          </view>
+        </swiper-item>
+      </swiper>
+    </scroll-view>
+</view>

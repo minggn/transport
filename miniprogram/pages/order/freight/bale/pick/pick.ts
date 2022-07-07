@@ -9,58 +9,28 @@ Page({
     gocity:'../../assets/images/gocity.png',
     warn:'../../assets/images/warn.png',
     focus: false,
-    inputValue: 0,
-  },
-  one(e:any){
-    this.setData({
-     inputValue: this.data.inputValue + 1
-    })
-  },
-  del(){
-
+    inputValue: '',
+    show:3
   },
   bindKeyInput: function (e:any) {
-    var inputValue = e.detail.value
-    console.log(inputValue)
-    for(var i=-1;i<inputValue;i++){
-      var tiipt = i+1
-      console.log(tiipt)
-          this.setData({
-          inputValue:  tiipt ,
-        })
-    }
-   
-  },
-  gohome(){
-    wx.showModal({
-      title: '提示',
-      content: '取消订单将不再继续接下来的并退回主页面，请问是否继续？',
-      success (res) {
-        if (res.confirm) {
-          wx.switchTab({
-            url: '/pages/index/index',
-          })
-        } else if (res.cancel) {
-          console.log('用户点击取消')
-        }
-      }
+    this.setData({
+      inputValue: e.detail.value
     })
   },
-  golist(){
+  gobuy(){
     wx.showModal({
-      title: '请确认',
-      content: '请确认您所输入的快递单号是否无误，一旦提交，则不可修改',
+      title: '是否前往转运页面进行支付',
+      content: '确认后将跳往转运页面进行支付，是否继续前往',
       success (res) {
         if (res.confirm) {
           wx.navigateTo({
-            url: '/pages/order/freight/freight',
+            url: '/pages/order/freight/bale/pick/buy/buy',
           })
         } else if (res.cancel) {
           console.log('用户点击取消')
         }
       }
     })
-   
   },
 
   /**

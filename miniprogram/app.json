@@ -6,14 +6,22 @@
     "pages/personal/personal",
     "pages/tice/tice",
     "pages/copy/copy",
-    "pages/freight/freight",
+    "pages/order/freight/freight",
     "pages/storehousecopy/storehousecopy",
     "pages/logs/details/details",
     "pages/logs/details/cupon/cupon",
     "pages/index/address/address",
     "pages/myaddress/myaddress",
     "pages/myaddress/addre/addre",
-    "pages/everyorder/everyorder"
+    "pages/everyorder/everyorder",
+    "pages/order/freight/bale/bale",
+    "pages/order/freight/bale/pick/pick",
+    "pages/order/freight/bale/pick/buy/buy",
+    "pages/order/freight/bale/pick/buy/pay/pay"
+
+
+
+
 
 
 
