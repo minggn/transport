@@ -1,0 +1,4 @@
+<view style="text-align: center;">
+      <image style="width: 100px;height: 100px;" src="{{payend}}"/>
+      <view bindtap="gohome" style="width: 100px;height: 30px;border: 1px solid rgb(83, 226, 27);text-align: center;line-height: 30px;border-radius: 14px;color: rgb(83, 226, 27);margin-left: 32%;">完成</view>
+</view>

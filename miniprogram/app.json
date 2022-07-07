@@ -17,7 +17,11 @@
     "pages/order/freight/bale/bale",
     "pages/order/freight/bale/pick/pick",
     "pages/order/freight/bale/pick/buy/buy",
-    "pages/order/freight/bale/pick/buy/pay/pay"
+    "pages/order/freight/bale/pick/buy/pay/pay",
+    "pages/order/freight/bale/pick/buy/pay/ment/ment",
+    "pages/order/freight/bale/pick/buy/pay/ment/payend/payend"
+
+
 
 
 
@@ -48,7 +52,7 @@
       "text": "优惠劵"
     },
     {
-      "pagePath": "pages/order/order",
+      "pagePath": "pages/order/freight/freight",
       "iconPath": "./assets/tabbar/order_nope.png",
       "selectedIconPath": "./assets/tabbar/order.png",
       "text": "订单"

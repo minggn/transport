@@ -1,22 +1,19 @@
-// pages/myaddress/addre/addre.ts
+// pages/order/order.ts
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    switch1Checked: true,
-    switch1Style: '',
-    inputValue: ''
+         payend:'../../../../../../../../../assets/images/wx.png'
   },
-  bindKeyInput: function (e:any) {
-    this.setData({
-      inputValue: e.detail.value
-    })
+  gohome(){
+    wx.switchTab({
+                url: '/pages/index/index',
+              })
   },
-  switch1Change(e:any){
-       console.log(e.detail.value)
-  },
+ 
+
   /**
    * 生命周期函数--监听页面加载
    */

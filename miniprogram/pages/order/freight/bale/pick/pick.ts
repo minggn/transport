@@ -9,13 +9,21 @@ Page({
     gocity:'../../assets/images/gocity.png',
     warn:'../../assets/images/warn.png',
     focus: false,
-    inputValue: '',
-    show:3
+    inputValue: 0,
+    show:3,
+    text:''
+
   },
   bindKeyInput: function (e:any) {
-    this.setData({
-      inputValue: e.detail.value
-    })
+    var inputValue = e.detail.value
+    console.log(inputValue)
+    for(var i=-1;i<inputValue;i++){
+      var tiipt = i+1
+      // console.log(tiipt)
+          this.setData({
+          inputValue:  tiipt ,
+        })
+    }
   },
   gobuy(){
     wx.showModal({
@@ -27,7 +35,7 @@ Page({
             url: '/pages/order/freight/bale/pick/buy/buy',
           })
         } else if (res.cancel) {
-          console.log('用户点击取消')
+          console.log('我点了一下按钮')
         }
       }
     })
@@ -36,8 +44,26 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad() {
-
+  onLoad(options:any) {
+    var inputValue = this.data.inputValue
+    console.log(inputValue)
+    console.log(options.valu)
+    var int = parseInt(options.valu)
+    // console.log('int')
+    for(var i=-1;i<inputValue;i++){
+      // var tiipt = i+1
+          this.setData({
+            inputValue: int,
+            // show:int
+        })
+    }
+    // var valu = options.valu;
+    // console.log(valu)
+    // this.setData({
+    //   inputValue: options.valu,
+    //   // currentIndex: options.str
+    // })
+    // console.log(this.data.inputValue)
   },
 
   /**

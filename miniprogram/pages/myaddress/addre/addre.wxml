@@ -3,22 +3,28 @@
    <view>
     <view style="margin-left: 34px;">
                 <view style="margin-top: 20px;font-size: 12px;">Name:
-
+                  <view class="weui-cells__title">实时获取输入值：{{inputValue}}</view>
+                <input class="weui-input"  maxlength="10"    bindinput="bindKeyInput" placeholder="输入同步到view中"/>
                 </view>
                 <view style="margin-top: 20px;font-size: 12px;">Phone:
-
+                  <!-- <view class="weui-cells__title">实时获取输入值：{{inputValue}}</view>
+                <input class="weui-input"  maxlength="10"    bindinput="b" placeholder="输入同步到view中"/> -->
                 </view>
                 <view style="margin-top: 20px;font-size: 12px;">Address:
-
+                  <!-- <view class="weui-cells__title">实时获取输入值：{{inputValue}}</view>
+                <input class="weui-input"  maxlength="10"    bindinput="c" placeholder="输入同步到view中"/> -->
                 </view>
                 <view style="margin-top: 20px;font-size: 12px;">City:
-
+                  <!-- <view class="weui-cells__title">实时获取输入值：{{inputValue}}</view>
+                <input class="weui-input"  maxlength="10"    bindinput="d" placeholder="输入同步到view中"/> -->
                 </view>
                 <view style="margin-top: 20px;font-size: 12px;">PostCode:
-
+                  <!-- <view class="weui-cells__title">实时获取输入值：{{inputValue}}</view>
+                <input class="weui-input"  maxlength="10"    bindinput="e" placeholder="输入同步到view中"/> -->
                 </view>
                 <view style="margin-top: 20px;font-size: 12px;">Country:   
-
+                  <!-- <view class="weui-cells__title">实时获取输入值：{{inputValue}}</view>
+                <input class="weui-input"  maxlength="10"    bindinput="f" placeholder="输入同步到view中"/> -->
                </view>
                <view class="default">
                设为默认

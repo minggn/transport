@@ -8,6 +8,7 @@ Page({
     myposition:'../../assets/images/myposition.png',
     gocity:'../../assets/images/gocity.png',
     warn:'../../assets/images/warn.png',
+    weight:'../../../../../../assets/images/weight.png',
     focus: false,
     inputValue: ''
   },

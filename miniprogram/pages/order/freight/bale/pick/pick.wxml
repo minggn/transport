@@ -32,22 +32,50 @@
    </view>
 
    <view class="delivery">
+   
        <view class="warn">
+       
         <image  style="width: 16px; height: 16px;margin-top: 10px;margin-left: 10px;"  src="{{warn}}"></image>
         <view style="font-size: 12px;color: #de412c;margin-top: 10px;margin-left: 10px;">快递全部到齐点击确认打包后,订单不可修改</view>
        </view>
        <view class="mynum">
+      
            <view style="font-size: 24px;color: #de412c;margin-left: 30px;">*</view>
            <view style="color: #42ace2;">快递个数</view>
            <view>
-            <input style="margin-left: 14px;" class="weui-input" auto-focus placeholder="  请输入（输入后弹出快递单号位置）"/>
+            <input bindinput="bindKeyInput" style="margin-left: 14px;" class="weui-input" auto-focus placeholder="  请输入（输入后弹出快递单号位置）"/>
            </view>
        </view>
+       
+      
        <view>
+    
         <input class="bginput" auto-focus placeholder="  备注信息,例如去掉包装盒等"/>
+       
        </view>
+
+       <view class="content">
+  <view style="display: flex;" wx:for="{{inputValue}}" wx:for-index="myIndex" wx:for-item="myItem">
+ <view >
+  {{myIndex+1}}:
+ </view>
+ <view style="width: 100%;border-radius: 4px;border:2px solid #ccc;display: flex;margin-top: 6px;" >
+  <input  placeholder="输入"/>
+  <view>
+    <!-- <view class="del" bindtap="del" data-id="{{1}}"  id="{{myIndex+1}}">{{myIndex+1}}删除</view> -->
+    <view  data-id="{{1}}"  data-haha="{{index}}" bindtap="del"  id="{{myIndex+1}}">删除</view>
+  </view>
+  <!-- <view  data-id="{{1}}"  data-haha="{{index}}" bindtap="a"  id="{{myIndex+1}}">点击获取data-id绑定的id值</view> -->
+ </view>
+</view>
+       </view>
+
    </view>
 
+
+      
+
+  
    <view class="myorder">
        <view class="orderone">
         <view class="ordernum">

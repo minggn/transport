@@ -16,6 +16,11 @@ Page({
       inputValue: e.detail.value
     })
   },
+  goend(){
+    wx.navigateTo({
+      url: '/pages/order/freight/bale/pick/buy/pay/ment/payend/payend',
+    })
+  },
   gopay(){
     wx.showModal({
       title: '请确认',

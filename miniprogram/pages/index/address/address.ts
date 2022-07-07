@@ -10,7 +10,7 @@ Page({
   },
   goorder(){
     wx.navigateTo({
-        url: '/pages/index/index',
+        url: '/pages/order/order',
       })
   },
   goaddress(){

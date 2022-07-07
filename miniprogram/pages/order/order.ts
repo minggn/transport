@@ -16,15 +16,36 @@ Page({
      inputValue: this.data.inputValue + 1
     })
   },
-  del(){
+  // del(e:any,event:any){
+  //     // console.log(this.de)
+  //     console.log(event.dataset.index)
+  // },
+//   del: function (event:any) {
+//     console.log(event.currentTarget.dataset.id)
+// },
+del:function(event:any,e:any){
+  // console.log(event.currentTarget.id)
+  let one = event.currentTarget.id
+  let inputValue = this.data.inputValue
+  // console.log(one)
+  var reduce = inputValue - one
+  console.log(reduce)
+  this.setData({
+       inputValue:reduce
+  })
+  // console.log(this.data.inputValue)
+    //打印出view中所有属性的值，包括“点击获取data-id绑定的id值”
+  // console.log(event.currentTarget.dataset.id)    //打印出data-id绑定的id值
+  // console.log(event.currentTarget.dataset.haha)   //打印出index的值
+  console.log(event.currentTarget.id) 
 
-  },
+},
   bindKeyInput: function (e:any) {
     var inputValue = e.detail.value
-    console.log(inputValue)
+    // console.log(inputValue)
     for(var i=-1;i<inputValue;i++){
       var tiipt = i+1
-      console.log(tiipt)
+      // console.log(tiipt)
           this.setData({
           inputValue:  tiipt ,
         })
@@ -41,22 +62,28 @@ Page({
             url: '/pages/index/index',
           })
         } else if (res.cancel) {
-          console.log('用户点击取消')
+          console.log('order取消')
         }
       }
     })
   },
   golist(){
+    const _this = this
+    // var valu = _this.data.inputValue
+    // console.log(valu)
     wx.showModal({
       title: '请确认',
       content: '请确认您所输入的快递单号是否无误，一旦提交，则不可修改',
       success (res) {
         if (res.confirm) {
+          var valu = _this.data.inputValue
+          console.log(valu)
           wx.navigateTo({
-            url: '/pages/order/freight/freight',
+            url: '/pages/order/freight/bale/pick/pick?valu=' + valu
           })
         } else if (res.cancel) {
           console.log('用户点击取消')
+          // console.log(_this.data.inputValue)
         }
       }
     })
@@ -66,8 +93,17 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad() {
+  onLoad(e:any) {
+    var inputValue = this.data.inputValue
+    console.log(inputValue)
+    for(var i=-1;i<inputValue;i++){
+      var tiipt = i+1
+          this.setData({
+          inputValue:  tiipt ,
+        })
+    }
 
+    
   },
 
   /**

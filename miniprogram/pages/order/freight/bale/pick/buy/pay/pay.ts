@@ -10,7 +10,7 @@ Page({
     warn:'../../assets/images/warn.png',
     focus: false,
     inputValue: '',
-    weight:'../../../../../../../assets/images/weight.png'
+    weight:'../../../../../../../assets/images/weight.png',
   },
   bindKeyInput: function (e:any) {
     this.setData({
@@ -20,14 +20,14 @@ Page({
   gopay(){
     wx.showModal({
       title: '请确认',
-      content: '请确认您所选择的收货地址是否正确',
+      content: '买不买保险？',
       success (res) {
         if (res.confirm) {
           wx.navigateTo({
             url: '/pages/order/freight/bale/pick/buy/pay/ment/ment',
           })
         } else if (res.cancel) {
-          console.log('用户点击取消')
+          console.log('我点击取消了')
         }
       }
     })
@@ -37,8 +37,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad() {
-
   },
+  
 
   /**
    * 生命周期函数--监听页面初次渲染完成

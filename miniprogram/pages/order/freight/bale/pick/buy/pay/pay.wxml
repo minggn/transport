@@ -3,64 +3,26 @@
    <view style="font-size: 12px;text-align: center;width: 100%;height: 20px;background-color: #2e93c5;">您的快递包裹已经全部到达仓库，请及时确认捡货打包。</view>
 
    <view class="Target">
-       <view>
         <view class="poshope">
-            <image  style="width: 30px; height: 30px;margin-top: 10px;margin-left: 10px;"  src="{{myposition}}"></image>
-           
            <view class="hope">
-               <view style="font-size: 14px;">新希望仓库</view>
-               <view style="font-size: 14px;margin-left: 20px;">18688880130</view>
-               <view style="font-size: 14px;color: #3faae2;margin-left: 10px;">复制</view>
+               <view style="font-size: 14px;">订单号:</view>
+              <input/>
            </view>
         </view>
-           <view style="font-size: 12px;color: #ccc;margin-left: 50px;">深圳市龙华区龙华街道工业路壹城环智中心C座2607室</view>
-       </view>
        <view>
         <view>
-        <view class="poshope">
-            <image  style="width: 30px; height: 30px;margin-top: 10px;margin-left: 10px;"  src="{{gocity}}"></image>
-           
+        <view class="poshope">   
            <view class="hope">
                <view style="font-size: 14px;">铭</view>
                <view style="font-size: 14px;margin-left: 20px;">18688880130</view>
            </view>
         </view>
-           <view style="font-size: 12px;color: #ccc;margin-left: 50px;">MEGASYSTEMS INC 799 E DRAGRAM SUITE 5A TUCSON,AZ 85705 USA</view>
        </view>
-
        </view>
    </view>
 
    <view class="myorder">
-       <view class="orderone">
-        <view class="ordernum">
-            <view>运费：￥138.00</view>
-        </view>
-        <view style="margin-top: 4px;">
-           运费：￥0.00
-        </view>
-        <view style="margin-top: 4px;">
-            称重重量：5.6kg
-        </view>
-        <view style="margin-top: 4px;">
-            分拣备注：已拆封分拣，统一归类
-        </view>
-        <view style="margin-top: 4px;">
-            打包备注：东西太多，已统一打包加固
-        </view>
-        <view style="margin-top: 4px;">
-             称重图片：
-        </view>
-        <view>
-            <image style="width: 80px;height: 80px;margin-left: 8px;" src="{{weight}}"></image>
-            <image style="width: 80px;height: 80px;margin-left: 8px;" src="{{weight}}"></image>
-            <image style="width: 80px;height: 80px;margin-left: 8px;" src="{{weight}}"></image>
-        </view>
-        <view>
-           账单：
-        </view>
-        
-    </view> 
+     <view>{{text}}</view>
    </view>
 
    <view class="delivery">
@@ -68,38 +30,11 @@
         <image  style="width: 16px; height: 16px;margin-top: 10px;margin-left: 10px;"  src="{{warn}}"></image>
         <view style="font-size: 12px;color: #de412c;margin-top: 10px;margin-left: 10px;">快递全部到齐点击确认打包后,订单不可修改</view>
        </view>
-       <view class="mynum">
-           <view style="font-size: 24px;color: #de412c;margin-left: 30px;">*</view>
-           <view style="color: #42ace2;">快递个数</view>
-           <view>
-            <input style="margin-left: 14px;" class="weui-input" auto-focus placeholder="  请输入（输入后弹出快递单号位置）"/>
-           </view>
-       </view>
-       <view>
-        <input class="bginput" auto-focus placeholder="  备注信息,例如去掉包装盒等"/>
-       </view>
+      
+      
    </view>
 
-   <view class="myorder">
-       <view class="orderone">
-        <view class="ordernum">
-            <view>订单号：20220509140712345678</view>
-            <view style="margin-left: 10px;color: #63b88b;">复制</view>
-        </view>
-        <view style="margin-top: 4px;">
-            转运线路：中国 - 美国
-        </view>
-        <view style="margin-top: 4px;">
-            预选渠道：普通货物
-        </view>
-        <view style="margin-top: 4px;">
-            订单状态：待填写
-        </view>
-        <view style="margin-top: 4px;">
-            下单时间：2022-05-09 14:07:12
-        </view>
-    </view> 
-   </view>
+   
   <view style="width: 100%;height: 60px;background-color: blue;display: flex;">
     <view  bindtap="gopay" style="width: 50%;height: 60px;background-color: #40b850;text-align: center;line-height: 60px;font-size: 20px;color: white;">前往支付</view>
     <view   style="width: 50%;height: 60px;background-color: #42ace2;text-align: center;line-height: 60px;font-size: 20px;color: white;">联系客服</view>
