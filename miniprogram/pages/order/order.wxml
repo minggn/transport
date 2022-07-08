@@ -52,9 +52,10 @@
   {{myIndex+1}}:
  </view>
  <view style="width: 100%;border-radius: 4px;border:2px solid #ccc;display: flex;margin-top: 6px;" >
-  <input  placeholder="输入"/>
+  <input bindinput="enter" data-id="{{1}}"   placeholder="输入"/>
   <view>
     <!-- <view class="del" bindtap="del" data-id="{{1}}"  id="{{myIndex+1}}">{{myIndex+1}}删除</view> -->
+    <view data-id="{{1}}" bindtap="ned" id="{{myIndex+1}}">你好</view>
     <view  data-id="{{1}}"  data-haha="{{index}}" bindtap="del"  id="{{myIndex+1}}">删除</view>
   </view>
   <!-- <view  data-id="{{1}}"  data-haha="{{index}}" bindtap="a"  id="{{myIndex+1}}">点击获取data-id绑定的id值</view> -->

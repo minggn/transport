@@ -28,16 +28,25 @@
           <view wx:for="{{firstList}}" wx:for-item="item" class='record-item'>
             <view class='name'>
               <span>订单号：{{item.name}}{{text}}</span>
-              <span>面额：{{item.money}}</span>
+              <span>面额：{{item.type}}</span>
+              <view>
+                <view wx:if="{{item.type>1}}">待支付</view>
+                <view wx:elif="{{item.type>2}}">已支付</view>
+                <view wx:else="{{item.type>3}}">已完成</view>
+              </view>
+              <view wx:if="{{item.ict>2}}" bindtap="goBale">确认打包</view>
             </view>
-            <view bindtap="goBale">确认打包</view>
+           
           </view>
         </swiper-item>
         <swiper-item class='swiper' >
           <view wx:for="{{secondList}}" wx:for-item="item" class='record-item'>
             <view class='name'>
               <span>订单号：{{item.name}}</span>
-              <span>面额：{{item.money}}</span>
+              <span>面额：{{item.type}}</span>
+              <view wx:if="{{item.type>1}}">待支付</view>
+              <view wx:elif="{{item.type>2}}">已支付</view>
+              <view wx:else="{{item.type>3}}">已完成</view>
             </view>
           </view>
         </swiper-item>
@@ -45,15 +54,21 @@
           <view wx:for="{{thirdList}}" wx:for-item="item" class='record-item'>
            <view class='name'>
               <span>订单号：{{item.name}}</span>
-              <span>面额：{{item.money}}</span>
+              <span>面额：{{item.type}}</span>
+              <view wx:if="{{item.type>1}}">已支付</view>
+              <view wx:elif="{{item.type>2}}">已支付</view>
+              <view wx:else="{{item.type>3}}">已完成</view>
             </view>
           </view>
         </swiper-item>
         <swiper-item class='swiper'>
-          <view wx:for="{{thirdList}}" wx:for-item="item" class='record-item'>
+          <view wx:for="{{fourList}}" wx:for-item="item" class='record-item'>
            <view class='name'>
               <span>订单号：{{item.name}}</span>
-              <span>面额：{{item.money}}</span>
+              <span>面额：{{item.type}}</span>
+              <view wx:if="{{item.type>1}}">待支付</view>
+              <view wx:elif="{{item.type>2}}">已支付</view>
+              <view wx:else="{{item.type>3}}">已完成</view>
             </view>
           </view>
         </swiper-item>

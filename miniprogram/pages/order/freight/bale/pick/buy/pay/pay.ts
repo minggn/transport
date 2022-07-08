@@ -9,13 +9,75 @@ Page({
     gocity:'../../assets/images/gocity.png',
     warn:'../../assets/images/warn.png',
     focus: false,
-    inputValue: '',
+    inputValue: 0,
     weight:'../../../../../../../assets/images/weight.png',
+    switch1Checked: true,
+    switch2Checked: true,
+    int:0,
+    itt:0,
+    three:3,
   },
   bindKeyInput: function (e:any) {
     this.setData({
       inputValue: e.detail.value
     })
+  },
+  switch1Change(e:any){
+    if(this.data.switch1Checked === true){
+         console.log(this.data.inputValue)
+         var inputValue = e.detail.value
+         var it = this.data.inputValue
+         var ist = it
+         console.log(inputValue)
+         this.setData({
+              inputValue:it,
+              int:ist*0.03
+         })
+    }else{
+      console.log(this.data.inputValue)
+      var inputValue = e.detail.value
+      var it = this.data.inputValue
+      var ist = it
+      console.log(inputValue)
+       this.setData({
+        inputValue:it*0,
+        int:ist*0
+       })
+    }
+          // var on = this.data.switch1Checked
+          // console.log(!on)
+          // console.log(this.data.inputValue)
+  },
+  switch2Change(e:any){
+    if(this.data.switch2Checked === true){
+         console.log(this.data.inputValue)
+         var inputValue = e.detail.value
+         var it = this.data.inputValue
+         var ist = it
+         console.log(inputValue)
+         this.setData({
+              inputValue:it,
+              itt:ist*0.02
+         })
+    }else{
+      console.log(this.data.inputValue)
+      var inputValue = e.detail.value
+      var it = this.data.inputValue
+      var ist = it
+      console.log(inputValue)
+       this.setData({
+        inputValue:it*0,
+        int:ist*0
+       })
+    }
+          // var on = this.data.switch1Checked
+          // console.log(!on)
+          // console.log(this.data.inputValue)
+  },
+  money(e:any){
+        this.setData({
+          inputValue:e.detail.value
+        })
   },
   gopay(){
     wx.showModal({

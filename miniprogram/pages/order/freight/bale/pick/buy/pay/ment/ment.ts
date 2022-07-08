@@ -8,14 +8,28 @@ Page({
     myposition:'../../assets/images/myposition.png',
     gocity:'../../assets/images/gocity.png',
     warn:'../../assets/images/warn.png',
+    im:'../../../../../../../../assets/images/imt.png',
     focus: false,
     inputValue: '',
+      one:10,
+      two:2,
+      diu:0.03,
+      bao:0.02,
+      typ:0,
+      showView: false, 
+      sho:false,
+      // "List": [{ money:'3' }, { money:'5'},{money:'2'}],
   },
+  // max(){
+   
+
+  // },
   bindKeyInput: function (e:any) {
     this.setData({
       inputValue: e.detail.value
     })
   },
+  
   goend(){
     wx.navigateTo({
       url: '/pages/order/freight/bale/pick/buy/pay/ment/payend/payend',
@@ -40,9 +54,22 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad() {
-
+  onLoad: function (options) {
+    showView: (options.showView == "true" ? true : false)
   },
+  change: function () {
+      var that = this;
+      that.setData({
+      showView: (!that.data.showView)
+    })
+  },
+  moe: function () {
+    var that = this;
+    that.setData({
+    sho: (!that.data.sho)
+  })
+},
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

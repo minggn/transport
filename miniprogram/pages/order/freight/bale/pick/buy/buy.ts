@@ -10,17 +10,23 @@ Page({
     warn:'../../assets/images/warn.png',
     weight:'../../../../../../assets/images/weight.png',
     focus: false,
-    inputValue: ''
+    inputValue: 0,
   },
   bindKeyInput: function (e:any) {
-    this.setData({
-      inputValue: e.detail.value
-    })
+    var inputValue = e.detail.value
+    console.log(inputValue)
+    for(var i=-1;i<inputValue;i++){
+      var tiipt = i+1
+      // console.log(tiipt)
+          this.setData({
+          inputValue:  tiipt ,
+        })
+    }
   },
   gobuy(){
     wx.showModal({
-      title: '是否前往转运页面进行支付',
-      content: '确认后将跳往转运页面进行支付，是否继续前往',
+      title: '请确认',
+      content: '请确认您的收货地址是否无误',
       success (res) {
         if (res.confirm) {
           wx.navigateTo({
@@ -36,8 +42,19 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad() {
-
+  onLoad(options:any) {
+    var inputValue = this.data.inputValue
+    console.log(inputValue)
+    console.log(options.valu)
+    var int = parseInt(options.valu)
+    // console.log('int')
+    for(var i=-1;i<inputValue;i++){
+      // var tiipt = i+1
+          this.setData({
+            inputValue: int,
+            // show:int
+        })
+    }
   },
 
   /**

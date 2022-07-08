@@ -63,24 +63,43 @@
     </view> 
    </view>
 
-   <view class="delivery">
+   <view class="delivery" style="height: 100%;">
        <view class="warn">
         <image  style="width: 16px; height: 16px;margin-top: 10px;margin-left: 10px;"  src="{{warn}}"></image>
         <view style="font-size: 12px;color: #de412c;margin-top: 10px;margin-left: 10px;">快递全部到齐点击确认打包后,订单不可修改</view>
        </view>
+
        <view class="mynum">
            <view style="font-size: 24px;color: #de412c;margin-left: 30px;">*</view>
            <view style="color: #42ace2;">快递个数</view>
            <view>
-            <input style="margin-left: 14px;" class="weui-input" auto-focus placeholder="  请输入（输入后弹出快递单号位置）"/>
+            <input bindinput="bindKeyInput" style="margin-left: 14px;" class="weui-input" auto-focus placeholder="  请输入（输入后弹出快递单号位置）"/>
            </view>
        </view>
+
        <view>
         <input class="bginput" auto-focus placeholder="  备注信息,例如去掉包装盒等"/>
        </view>
+
+       <view class="content">
+       <view style="display: flex;" wx:for="{{inputValue}}" wx:for-index="myIndex" wx:for-item="myItem">
+       <view >
+       {{myIndex+1}}:
+       </view>
+       <view style="width: 100%;border-radius: 4px;border:2px solid #ccc;display: flex;margin-top: 6px;" >
+       <input bindinput="needo"  placeholder="输入"/>
+       <view>
+       <view  style="width: 48px;height: 20px;background-color: blue;text-align: center;margin-left: 54px;">已入库</view>
+        </view>
+        </view>
+
+        </view>
+       </view>
+ 
+
    </view>
 
-   <view class="myorder">
+   <view class="myorder" style="height: 100%;">
        <view class="orderone">
         <view class="ordernum">
             <view>订单号：20220509140712345678</view>
@@ -93,7 +112,10 @@
             预选渠道：普通货物
         </view>
         <view style="margin-top: 4px;">
-            订单状态：待填写
+            订单状态：待出仓
+        </view>
+        <view style="margin-top: 4px;">
+            支付状态：待支付
         </view>
         <view style="margin-top: 4px;">
             下单时间：2022-05-09 14:07:12

@@ -3,8 +3,8 @@
    <view>
     <view style="margin-left: 34px;">
                 <view style="margin-top: 20px;font-size: 12px;">Name:
-                  <view class="weui-cells__title">实时获取输入值：{{inputValue}}</view>
-                <input class="weui-input"  maxlength="10"    bindinput="bindKeyInput" placeholder="输入同步到view中"/>
+                  <view class="weui-cells__title">{{inputValue}}</view>
+                <input class="weui-input"  maxlength="10"    bindinput="bindKeyInput" placeholder="输入"/>
                 </view>
                 <view style="margin-top: 20px;font-size: 12px;">Phone:
                   <!-- <view class="weui-cells__title">实时获取输入值：{{inputValue}}</view>

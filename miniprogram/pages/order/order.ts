@@ -10,22 +10,20 @@ Page({
     warn:'../../assets/images/warn.png',
     focus: false,
     inputValue: 0,
+    itt:0,
+    order:{"one":1,"two":2}
   },
   one(e:any){
     this.setData({
      inputValue: this.data.inputValue + 1
     })
   },
-  // del(e:any,event:any){
-  //     // console.log(this.de)
-  //     console.log(event.dataset.index)
-  // },
-//   del: function (event:any) {
-//     console.log(event.currentTarget.dataset.id)
-// },
 del:function(event:any,e:any){
   // console.log(event.currentTarget.id)
-  let one = event.currentTarget.id
+  let one = event.currentTarget.id 
+  let two = event.currentTarget
+  console.log(two)
+  console.log(this.data.itt)
   let inputValue = this.data.inputValue
   // console.log(one)
   var reduce = inputValue - one
@@ -40,6 +38,22 @@ del:function(event:any,e:any){
   console.log(event.currentTarget.id) 
 
 },
+ned:function(event:any,e:any){
+  console.log(event.currentTarget.id)
+  console.log(this.data.order.two)
+  let one = this.data.order.one
+  this.setData({
+      one:this.data.itt
+  })
+  // let one = event.currentTarget.id 
+  // let two = event.currentTarget
+  // console.log(two)
+  console.log(this.data.itt)
+  // let inputValue = this.data.inputValue
+  // console.log(one)
+  // console.log(event.currentTarget.id) 
+
+},
   bindKeyInput: function (e:any) {
     var inputValue = e.detail.value
     // console.log(inputValue)
@@ -51,6 +65,12 @@ del:function(event:any,e:any){
         })
     }
    
+  },
+  enter(e:any){
+    this.setData({
+      itt:e.detail.value
+    })
+    // console.log(this.data.itt)
   },
   gohome(){
     wx.showModal({
@@ -67,19 +87,26 @@ del:function(event:any,e:any){
       }
     })
   },
-  golist(){
+  golist(e:any,event:any){
     const _this = this
     // var valu = _this.data.inputValue
     // console.log(valu)
+    // let one = event.currentTarget.id
+    // console.log(event)
     wx.showModal({
       title: '请确认',
       content: '请确认您所输入的快递单号是否无误，一旦提交，则不可修改',
+
       success (res) {
         if (res.confirm) {
           var valu = _this.data.inputValue
           console.log(valu)
+          // // console.log(this.data.itt)
+          // var it:any = {"num":this.data.itt}
+          // console.log(it)
           wx.navigateTo({
             url: '/pages/order/freight/bale/pick/pick?valu=' + valu
+            // url: '/pages/order/freight/bale/pick/pick?valu=' + valu 
           })
         } else if (res.cancel) {
           console.log('用户点击取消')

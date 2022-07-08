@@ -3,9 +3,14 @@
    <view style="font-size: 12px;text-align: center;width: 100%;height: 20px;background-color: #2e93c5;">您的快递包裹已经全部到达仓库，请及时确认捡货打包。</view>
 
    <view class="Target">
-        <view class="poshope">
-           <view class="hope">
-               <view style="font-size: 14px;">订单号:</view>
+        <view class="poshope" >
+           <view class="hope" style="width: 100%;">
+               <view style="font-size: 14px;display: flex;">
+               <view>
+                <view>订单号:</view>
+               <view style="margin-left: 50px;margin-top: -18px;">20220509140712345678</view>
+               </view>
+             </view>
               <input/>
            </view>
         </view>
@@ -13,8 +18,9 @@
         <view>
         <view class="poshope">   
            <view class="hope">
-               <view style="font-size: 14px;">铭</view>
-               <view style="font-size: 14px;margin-left: 20px;">18688880130</view>
+               <view style="font-size: 14px;">保价</view>
+               <view  style="width: 100%;border-radius: 6px;border:2px solid #ccc;display: flex;margin-top: 6px;" ><input bindinput="money" placeholder="请输入商品真实价格"/></view>
+               {{inputValue}}
            </view>
         </view>
        </view>
@@ -22,20 +28,43 @@
    </view>
 
    <view class="myorder">
-     <view>{{text}}</view>
+   <view>
+    <view style="font-size:10px;margin-left:14px;">国际快递由于多国调度，存在一定比例丢失的情况！</view>
+     <view style="font-size:10px;margin-left:14px;">如丢失包裹，购买丢失险可获得全额赔付赔付(最高5000元)!</view>
+   </view>
+
+   <view style="display: flex;">
+   <view style="font-size:10px;margin-left:14px;margin-top: 30px;">
+    丢失险（保价的3%）</view>
+    <view class="body-view" style="margin-top: 20px;margin-left: 120px;">
+         <switch checked="{{switch1Checked}}" bindchange="switch1Change"/>
+    </view>
+   </view>
+
+   <view style="font-size:10px;margin-left:14px;margin-top: 30px;">保险费:{{int}}</view>
    </view>
 
    <view class="delivery">
-       <view class="warn">
-        <image  style="width: 16px; height: 16px;margin-top: 10px;margin-left: 10px;"  src="{{warn}}"></image>
-        <view style="font-size: 12px;color: #de412c;margin-top: 10px;margin-left: 10px;">快递全部到齐点击确认打包后,订单不可修改</view>
-       </view>
       
+        <view style="font-size:10px;margin-left:14px;">电子产品等容易被税的高客单价产品建议购买关税保险!</view>
+     <view style="font-size:10px;margin-left:14px;">英国关税起征点为0.01英镑!</view>
+     <view style="font-size:10px;margin-left:14px;">综合关税=货值x增值税率+(货值+运费+货值x产品税</view>
+     <view style="font-size:10px;margin-left:14px;">率)x20%+清关杂费。</view>
+     
+
+     <view style="display: flex;">
+      <view style="margin-left: 14px;font-size: 10px;margin-top: 30px;">关税险（保价的2%）</view>
+      <view class="body-view" style="margin-top: 20px;margin-left: 120px;">
+         <switch checked="{{switch1Checked}}" bindchange="switch2Change"/>
+    </view>
+     </view>
+     <view style="margin-left: 14px;font-size: 10px;margin-top: 30px;">保险费:{{itt}}</view>
+
       
    </view>
 
    
-  <view style="width: 100%;height: 60px;background-color: blue;display: flex;">
+  <view style="width: 100%;height:100%;display: flex;">
     <view  bindtap="gopay" style="width: 50%;height: 60px;background-color: #40b850;text-align: center;line-height: 60px;font-size: 20px;color: white;">前往支付</view>
     <view   style="width: 50%;height: 60px;background-color: #42ace2;text-align: center;line-height: 60px;font-size: 20px;color: white;">联系客服</view>
   </view>

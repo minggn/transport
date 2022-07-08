@@ -11,8 +11,9 @@ Page({
     focus: false,
     inputValue: 0,
     show:3,
-    text:''
-
+    text:'',
+    itt:'',
+    ned:3,
   },
   bindKeyInput: function (e:any) {
     var inputValue = e.detail.value
@@ -26,13 +27,16 @@ Page({
     }
   },
   gobuy(){
+    const _this = this
     wx.showModal({
       title: '是否前往转运页面进行支付',
       content: '确认后将跳往转运页面进行支付，是否继续前往',
       success (res) {
         if (res.confirm) {
+          var valu = _this.data.inputValue
+          console.log(valu)
           wx.navigateTo({
-            url: '/pages/order/freight/bale/pick/buy/buy',
+            url: '/pages/order/freight/bale/pick/buy/buy?valu='+valu,
           })
         } else if (res.cancel) {
           console.log('我点了一下按钮')
@@ -40,7 +44,11 @@ Page({
       }
     })
   },
-
+  needo(e:any){
+    this.setData({
+      itt:e.detail.value
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
